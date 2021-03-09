@@ -17,6 +17,7 @@ for i, battleRateRowI in enumerate(data[1:]):
         for k, battleRateRowK in enumerate(data[1:]):
             if(j>=k):
                 continue
+            
             teamCoverage = np.max(np.array([battleRateRowI, battleRateRowJ, battleRateRowK]), axis=0)[1:]
             teamSafety = (battleRateRowI[1:] + battleRateRowJ[1:] + battleRateRowK[1:])/3
             teamCounters = battleRateRowI[1:] + battleRateRowJ[1:] + battleRateRowK[1:]
